@@ -3,10 +3,12 @@ a {
     transition: 600ms;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 a:hover {
     direction: Crimson; 
     color: Crimson;
 }
+
 footer {
     background-color: #1b4762;
     color: white;
