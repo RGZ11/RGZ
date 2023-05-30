@@ -38,30 +38,23 @@
                 top: 25px;
             }
             .block4 {
-                width: auto;
+                width: 80%;
                 height: auto;
-                left:0;
+                left: 100px;
                 position: absolute;
                 font-size: 15pt;      
                 top: 200px;
                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                 z-index: -1;
             }
-        </style>
-        <script>      
-            function min () {
-                let x = [6800.00, 6870.00, 6880.00, 6800.00, 6830.00, 6810.00, 6865.00, 6900.00, 6840.00, 6800.00, 
-                6780.00, 6765.00, 6625.00, 6610.00, 6720.00, 6665.00, 6560.00, 6645.00, 6635.00, 6545.00];
-                let y = Math.min(x);
-                document.getElementById("min") = y;
-        }
-        </script>
-        
+            
+        </style>      
     </head>
 <body>
     <header>
-        <img src="photo1.png" class="block3">
-            <h2><div><a href="1.html" class="block1" style="text-decoration: none; line-height: 30px;" > 
+        
+            <h2><div><a href="1.html" class="block1" style="text-decoration: none; line-height: 30px;" >
+            <img src="photo1.png" class="block3"> 
             ВЫБОРГСКИЙ СУДОСТРОИТЕЛЬНЫЙ ЗАВОД </a></div></h2>
             
             <div class="block2">
@@ -71,13 +64,14 @@
                 <div><a href="5.html"> Видео </a></div>
             </div>
     </header>
+   
     <main>
-        <div class="block4">
+        <div class="block4">      
             <div>Капитализация на конец апреля: 10 302.91 млн RUB и 128.84 млн USD</div>
             <p></p>
             <div>Число акций: 1.55 млн шт</div>
             <p></p>
-            <table border="1px">
+            <table  border='1' cellspacing='0'>
                 <tr>
                     <td>Дата</td>
                     <td>Цена открытия</td>
@@ -248,15 +242,46 @@
                 </tr>
             </table>
             <p></p>
-            <div id="min"> min</div>
-            <div id="max"> max</div>
+            <div id="min"></div>
+            <script>
+                let x = [6800, 6870, 6880, 6800, 6830, 6810, 6865, 6900, 6840, 6800, 
+                6780, 6765, 6625, 6610, 6720, 6665, 6560, 6645, 6635, 6545,];
+                let y= Math.min(...x);
+                document.getElementById("min").innerHTML = "Минимальное значение: " + y + ",00";
+            </script>
+            <p></p> 
+            <div id="max"></div>  
+            <script>
+                let z = [6890,6975,6990,6960,6875,6880,6990,7000,7000,7100,6935,7600,6905,
+                6920,6950,6835,6745,6755,6780,6695];
+                let q= Math.max(...z);
+                document.getElementById("max").innerHTML = "Максимальное значение: " + q + ",00";
+            </script>      
+            <p></p>
+            <div id="sred"></div>
+            <script>
+                let cpicok = [6825, 6930, 6930, 6865, 6860, 6820, 6910, 6950, 6935, 
+                6930, 6855, 7085, 6835, 6790, 6805, 6715, 6660, 6690, 6715, 6615];
+                let kolishectvo = cpicok.length; // получаем количество чисел в списке = 20
+                let sred = cpicok.reduce((acc, val) => acc + val, 0) / kolishectvo; // ищем среднее значение
+                //асс - получает и хранит в себе число, 
+                //val - это текущее значение массива
+                //acc + val - это значение, которое будет запомнено в накопителе на текущей итерации и передано на следующую итерацию.
+                //цифра 0 означает число, с которого начнется запись суммы в "асс" (математически выглядит так "0+6825+...+6615")
+                let sredkvadrat = Math.sqrt(cpicok.reduce((acc, val) => acc + (val - sred) ** 2, 0) / kolishectvo);
+                //на этом этапе мы получаем сумму квадратов отклонений, сразу делим на количество чисел в списке и выносим 
+                //из под корня получая среднеквадратическое отклонение
+                document.getElementById("sred").innerHTML = "Среднеквадратическое отклонение: " + sredkvadrat.toFixed(2);
+                //выносим ответ на экран огроничик кол-во знаков после запятой до 2 с помощью .toFixed(2)
+            </script>
             <div style="color: white;">
-                ШШШШШШШШШШШШШШШШШШШШШШШ ШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШ
+                 ШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШ
                 ШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШ ШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШ
                 ШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШ  
-             </div>
+            </div>
         </div>
     </main>
+    
     
 </body>
 <footer>
