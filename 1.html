@@ -43,7 +43,7 @@
                 min-height: 100%;
                 min-width: 640px;
                 width: 100%;
-                height: auto;
+                height: 99%;
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -66,11 +66,27 @@
     </header>
     <main>
         <div>
-            <img src="VSZ.jpg" class="background">
+            <img src="VSZ.jpg" onclick="changeImage()" class="background">
+            <script>
+                var images = ["VSZ.jpg", "VSZ1.jpg", "VSZ2.jpg"]; // массив всех изображений
+                var currentIndex = 0; // текущий индекс изображения
+                
+                function changeImage() {
+                    var image = event.target; // получаем текущее изображение
+                    currentIndex = (currentIndex + 1) % images.length; // вычисляем следующий индекс изображения в массиве
+                    image.src = images[currentIndex]; // заменяем src-атрибут на следующее изображение
+                };
+            </script>
         </div>
     </main>
 </body>
 <footer>
+    <div style="position: absolute; right: 500px; font-size: 20px; top: 13px;">Мы в соц. сетях:</div>
+    <div><a href="https://rutube.ru/channel/25587153/" target="_blank" style="position: absolute; right: 430px; top: 3px; " ><img src="scr.png" style="width: 46px;"></a></div>
+    <div style="position: absolute; right: 350px; font-size: 20px; top: 3px;">RUTUBE</div>
+    <div><a href="https://vk.com/vyborgshipyard" target="_blank" style="position: absolute; right:200px; top: 4px; " ><img src="scr1.png" style="width: 43px;"></a></div>
+    <div style="position: absolute; right: 110px; font-size: 20px; top: 3px;">ВКонтакте</div>
+
     <div>
     &copy; Скрибка Владислав, РГЗ, ФБИ-11, 2 курс, 2023 
     </div>

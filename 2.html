@@ -48,7 +48,6 @@
                 left: 100px;
                 z-index: -1;
                 text-align: justify;
-                
             }
         </style>
     </head>
@@ -105,7 +104,20 @@
 
         <h1>Ледокольный флот</h1>
         
-        <img src="Ocompanii.jpg" style="width: 900px; height: 600px;">
+        <img src="Ocompanii.jpg" id="png" onclick="changeImage()" style="width: 900px; height: 600px;">
+        <script>
+            function changeImage() {
+              var image = document.getElementById("png");
+              if (image.src.match("Ocompanii.jpg")) {
+                image.src = "cmena.jpg";
+              } else {
+                image.src = "Ocompanii.jpg";
+              }
+            }
+            </script> 
+            <div>
+                Нажмите на фото ↑
+             </div>
         <p></p>   
         <div>В 2012 году верфь начала строительство линейных дизельных ледоколов проекта 21900 М мощностью 18 МВт. П
             ередача заказчику головного ледокола «Владивосток» состоялась в соответствии с контрактными сроками в октябре 2015 года, 
@@ -117,13 +129,16 @@
             После успешного прохождения ходовых испытаний оба судна были переданы заказчику ПАО «Газпромнефть Шиппинг» в 2018 году. 
             На данный момент суда проекта IBSV01 являются самыми мощными дизель-электрическими ледоколами в мире.</div>    
         <div style="color: white;">
-            ШШШШШШШШШШШШШШШШШШШШШШШ ШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШ
-            ШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШ ШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШ
-            ШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШ  
+            <p>1</p>  
         </div>
     </main>
 </body>
 <footer>
+    <div style="position: absolute; right: 500px; font-size: 20px; top: 13px;">Мы в соц. сетях:</div>
+    <div><a href="https://rutube.ru/channel/25587153/" target="_blank" style="position: absolute; right: 430px; top: 3px; " ><img src="scr.png" style="width: 46px;"></a></div>
+    <div style="position: absolute; right: 350px; font-size: 20px; top: 3px;">RUTUBE</div>
+    <div><a href="https://vk.com/vyborgshipyard" target="_blank" style="position: absolute; right:200px; top: 4px; " ><img src="scr1.png" style="width: 43px;"></a></div>
+    <div style="position: absolute; right: 110px; font-size: 20px; top: 3px;">ВКонтакте</div>
     <div>
     &copy; Скрибка Владислав, РГЗ, ФБИ-11, 2 курс, 2023 
     </div>

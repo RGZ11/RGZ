@@ -73,6 +73,8 @@
             <p></p>
             <div>Число акций: 1.55 млн шт</div>
             <p></p>
+            <div>Таблица предоставлена в рублях</div>
+            <p></p>
             <table  border='1' cellspacing='0'>
                 <tr>
                     <td>Дата</td>
@@ -244,6 +246,7 @@
                 </tr>
             </table>
             <p></p>
+            <div style="position: absolute; top: 218px; right: -20px; width: 30%;">
             <div id="min"></div>
             <script>
                 let x = [6800, 6870, 6880, 6800, 6830, 6810, 6865, 6900, 6840, 6800, 
@@ -276,15 +279,36 @@
                 document.getElementById("sred").innerHTML = "Среднеквадратическое отклонение: " + sredkvadrat.toFixed(2);
                 //выносим ответ на экран огроничик кол-во знаков после запятой до 2 с помощью .toFixed(2)
             </script>
+            <p></p>
+            <img src="photo_5458803253560068645_m.jpg" id="png" onclick="changeImage()" style="width: 400px;">
+            <script>
+                function changeImage() {
+                  var image = document.getElementById("png");
+                  if (image.src.match("photo_5458803253560068645_m.jpg")) {
+                    image.src = "plox.png";
+                  } else {
+                    image.src = "photo_5458803253560068645_m.jpg";
+                  }
+                }
+                </script> 
+             <div>
+                Нажмите на фото ↑
+             </div>   
+            </div>
+            
             <div style="color: white;">
-                 ШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШ
-                ШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШ ШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШ
-                ШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШ  
+                <p>1</p>  
             </div>
         </div>
     </main>   
 </body>
 <footer>
+    <div style="position: absolute; right: 500px; font-size: 20px; top: 13px;">Мы в соц. сетях:</div>
+    <div><a href="https://rutube.ru/channel/25587153/" target="_blank" style="position: absolute; right: 430px; top: 3px; " ><img src="scr.png" style="width: 46px;"></a></div>
+    <div style="position: absolute; right: 350px; font-size: 20px; top: 3px;">RUTUBE</div>
+    <div><a href="https://vk.com/vyborgshipyard" target="_blank" style="position: absolute; right:200px; top: 4px; " ><img src="scr1.png" style="width: 43px;"></a></div>
+    <div style="position: absolute; right: 110px; font-size: 20px; top: 3px;">ВКонтакте</div>
+
     <div>
     &copy; Скрибка Владислав, РГЗ, ФБИ-11, 2 курс, 2023 
     </div>
