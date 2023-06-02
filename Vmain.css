@@ -1,0 +1,35 @@
+header {
+    background-color: white;
+    padding: 58pt;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+a {
+    color: black;
+    transition: 600ms;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a:hover {
+    direction: Crimson; 
+    color: Crimson;
+}
+
+footer {
+    background-color: #1b4762;
+    color: white;
+    padding: 7px;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+    left: 0;
+}
+
